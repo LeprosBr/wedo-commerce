@@ -1,7 +1,9 @@
+import { Heading } from '../styles/theme'
+
 const Home: React.FC = () => {
     return (
         <>
-            <h1>text</h1>
+            <Heading level={1}>text</Heading>
         </>
     )
 }

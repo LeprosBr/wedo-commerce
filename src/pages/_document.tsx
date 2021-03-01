@@ -1,12 +1,13 @@
 import Document, {
     DocumentContext,
     DocumentInitialProps,
-    Head,
+
     Html,
     Main,
     NextScript
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import SEO from '../components/SEO'
 
 const titles = 'Wedo Shop'
 const siteTitle = 'Compra e venda de medicamentos'
@@ -44,20 +45,7 @@ class MyDocument extends Document {
     render(): JSX.Element {
         return (
             <Html lang="pt">
-                <Head>
-                    <meta charSet="utf-8" />
-                    <meta name="description" content={description} />
-                    <meta property="og:type" content="website" />
-                    <meta property="og:title" content={titles} />
-                    <meta property="og:description" content={description} />
-                    <meta property="og:site_name" content={siteTitle} />
-                    <link rel="preconnect" href="https://fonts.gstatic.com" />
-                    <link
-                        href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-                        rel="stylesheet"
-                    />
-                    <link rel="icon" href="/favicon.ico" />
-                </Head>
+                <SEO />
                 <body>
                     <Main />
                     <NextScript />

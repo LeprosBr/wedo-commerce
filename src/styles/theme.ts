@@ -7,8 +7,7 @@ const theme = {
         primary: '#295939',
         secondary: '#e9b0df',
 
-        text: '#383E71',
-
+        text: '#383E71'
     },
 
     sizes: {
@@ -18,6 +17,14 @@ const theme = {
         large: '2.4rem',
         xlarge: '3.2rem',
         xxlarge: '4rem'
+    },
+
+    breakpoints: {
+        small: '48em', // 768px
+        medium: '64em', // 1024px
+        large: '85.375em', // 1366px
+        xlarge: '120em', // 1920px
+        xxlarge: '160em' // 2560px
     }
 }
 

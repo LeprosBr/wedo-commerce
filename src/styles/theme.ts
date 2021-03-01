@@ -13,3 +13,8 @@ const theme = {
 }
 
 export default theme
+
+
+// export type HeadingProps = {
+//     color?: keyof typeof theme
+// }

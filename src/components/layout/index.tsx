@@ -10,6 +10,7 @@ const Layout: React.FunctionComponent = () => {
             <Wrapper>
                 <Main />
             </Wrapper>
+            {/* <Footer /> */}
         </Container>
     )
 }

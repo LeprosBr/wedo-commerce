@@ -2,10 +2,10 @@ import styled, { css } from 'styled-components'
 
 const theme = {
     colors: {
-        background: '#e8efeb',
+        background: '#f6f5f5',
 
-        primary: '#295939',
-        secondary: '#e9b0df',
+        primary: '#ffff',
+        secondary: '#d3e0ea',
 
         text: '#383E71'
     },

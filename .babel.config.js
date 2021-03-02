@@ -8,12 +8,9 @@ module.exports = {
         ]
     ],
     plugins: [
-        'styled-components',
         'babel-plugin-styled-components',
-        'inline-react-svg',
-        {
-            ssr: true,
-            displayName: true
-        }
+        ['styled-components', { ssr: true }],
+        'inline-react-svg'
     ]
+
 }

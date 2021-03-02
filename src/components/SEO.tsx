@@ -7,7 +7,7 @@ const SEO: React.FC = () => {
             <meta charSet="utf-8" />
             <meta name="description" content="{description}" />
             <meta property="og:type" content="website" />
-            <meta property="og:title" content="{titles}" />
+            <meta property="og:title" content="Wedo" />
             <meta property="og:description" content="{description}" />
             <meta property="og:site_name" content="{siteTitle}" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />

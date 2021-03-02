@@ -7,8 +7,10 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    margin: 0 auto;
+    margin: 2% auto;
     justify-content: center;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 25%);
     max-width: ${props => props.theme.breakpoints.medium};
     background: ${props => props.theme.colors.primary};
 

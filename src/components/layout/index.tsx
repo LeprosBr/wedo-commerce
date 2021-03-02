@@ -1,12 +1,16 @@
 import * as React from 'react'
+import Main from '../../pages/main'
 import Navbar from '../navbar'
+import { Container, Wrapper } from './styles'
 
-const Layout: React.FunctionComponent = ({ children }) => {
+const Layout: React.FunctionComponent = () => {
     return (
-        <>
+        <Container>
             <Navbar />
-            <div>{children}</div>
-        </>
+            <Wrapper>
+                <Main />
+            </Wrapper>
+        </Container>
     )
 }
 export default Layout

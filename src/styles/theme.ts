@@ -44,12 +44,12 @@ export const Heading = styled('h1').attrs<HeadingProps>(({ level }) => ({
     ${({
         color = 'white',
         size = 'normal',
-        fontWeight = 700,
+        fontWeight = 400,
         lineHeight = 1.5
     }) => css`
-        font-size: ${theme.sizes[size]}
-        color: ${theme.sizes[color]}
-        font-weight: ${fontWeight}
-        font-height: ${lineHeight}
+        font-size: ${theme.sizes[size]};
+        color: ${theme.sizes[color]};
+        font-weight: ${fontWeight};
+        line-height: ${lineHeight};
     `}
 `

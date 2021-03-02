@@ -10,4 +10,6 @@ export const Wrapper = styled.div`
     margin: 0 auto;
     justify-content: center;
     max-width: ${props => props.theme.breakpoints.medium};
+    background: ${props => props.theme.colors.primary};
+
 `

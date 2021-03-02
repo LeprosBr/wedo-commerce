@@ -2,14 +2,28 @@ import styled from 'styled-components'
 
 export const Nav = styled.nav`
     height: 100px;
-    font-size: ${props => props.theme.sizes.small};
     background-color: ${props => props.theme.colors.primary};
 `
 
 export const Aside = styled.nav`
-    height: 40px;
+    height: 50px;
     display: flex;
+    display: flex;
+    margin: 0 auto;
     text-align: center;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: ${props => props.theme.breakpoints.medium};
+
+    > strong {
+        display: flex;
+        justify-content: space-between;
+
+        > span {
+            margin: 0 10px;
+            font-weight: 100;
+        }
+    }
 `
 
 export const Wrapper = styled.div`
@@ -17,11 +31,10 @@ export const Wrapper = styled.div`
     display: flex;
     margin: 0 auto;
     align-items: center;
-    justify-content: space-between;
     max-width: ${props => props.theme.breakpoints.medium};
 
     > img {
-        width: 200px;
+        width: 150px;
     }
 
     > form {
@@ -51,12 +64,13 @@ export const Container = styled.form`
 
     > button {
         border: 0;
-        padding: 5px;
         width: 45px;
+        padding: 5px;
         border-left: 1px solid rgb(48 48 48);
-        background-color: hsl(0deg 0% 100% / 8%);
-        border-radius: 0 2px 2px 0;
         margin: 0;
+        > svg {
+            width: 25px;
+        }
     }
 `
 
@@ -68,14 +82,12 @@ export const Strong = styled.nav`
 
     > button {
         border: 0;
-        width: 10vw;
-        height: 100%;
+        margin: 0 10px;
         text-transform: capitalize;
         background-color: hsl(0deg 0% 100% / 8%);
-        font-size: ${props => props.theme.sizes.small};
-        margin: 0 10px;
+        font-size: ${props => props.theme.sizes.xsmall};
         > svg {
-            width: 30px;
+            width: 25px;
         }
     }
 `

@@ -1,6 +1,5 @@
-
-import { Heading } from '../../styles/theme';
-import { Container } from './styles';
+import { Heading } from '../../styles/theme'
+import { Container } from './styles'
 
 const Main: React.FC = () => {
     return (
@@ -10,4 +9,4 @@ const Main: React.FC = () => {
     )
 }
 
-export default Main;
+export default Main

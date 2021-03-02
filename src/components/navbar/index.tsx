@@ -2,43 +2,45 @@ import { Cart, SearchAlt, UserCircle } from '@styled-icons/boxicons-regular'
 import Link from 'next/link'
 import * as React from 'react'
 import wedoLogo from '../../assets/logo-wedo-medium.svg'
-import { Heading } from '../../styles/theme'
 import { Aside, Container, Nav, Strong, Wrapper } from './style'
+
+const Info: React.FC = () => (
+    <Aside>
+        <strong>
+            <span>Seja um Entregador</span>
+            <span>Carreiras</span>
+            <span>Wedo Empresas</span>
+        </strong>
+    </Aside>
+)
+
+const Form: React.FC = () => (
+    <form>
+        <Container>
+            <input type="text" placeholder="Pesquisar" name="search" />
+            <button type="submit">
+                <SearchAlt />
+            </button>
+        </Container>
+    </form>
+)
+
 const Navbar: React.FC = () => {
     return (
         <>
-            <Aside>
-                <Wrapper>
-                    <Heading level={5}>
-                        As ofertas são válidas por tempo determinado e/ou
-                        enquanto durarem os estoques.
-                    </Heading>
-                </Wrapper>
-            </Aside>
+            <Info />
             <Nav>
                 <Wrapper>
                     <Link href="/">
                         <img src={wedoLogo} alt="Wedo Logo" />
                     </Link>
-
-                    <form>
-                        <Container>
-                            <input
-                                type="text"
-                                placeholder="Pesquisar"
-                                name="search"
-                            />
-                            <button type="submit">
-                                <SearchAlt />
-                            </button>
-                        </Container>
-                    </form>
+                    <Form />
                     <Strong>
                         <button>
                             <Cart /> carrinho
                         </button>
                         <button>
-                            <UserCircle /> minha conta
+                            <UserCircle /> Entrar
                         </button>
                     </Strong>
                 </Wrapper>
@@ -46,4 +48,5 @@ const Navbar: React.FC = () => {
         </>
     )
 }
+
 export default Navbar

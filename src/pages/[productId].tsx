@@ -1,5 +1,6 @@
 import { CreditCard } from '@styled-icons/boxicons-regular'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import Head from 'next/head'
 import Stripe from 'stripe'
 import stripeConfig from '../../config/stripe'
 import { Box, Container, Img, Payment, Text } from '../styles/pages/product'
@@ -42,9 +43,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 const Product: React.FC<Props> = ({ product }) => {
-    console.log(product)
+    // console.log(product)
     return (
         <Container>
+            <Head>
+                <title>{product.name}</title>
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0, width=device-width"
+                />
+            </Head>
             <Img>
                 {product.images &&
                     product.images.map(img => <img key={img} src={img} />)}

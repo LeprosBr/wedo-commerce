@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import Link from 'next/link'
 import Stripe from 'stripe'
 import stripeConfig from '../../config/stripe'
@@ -27,6 +28,13 @@ const Home: React.FC<Props> = ({ products }) => {
 
     return (
         <Container>
+            <Head>
+                <title>Wedo | Compre Agora</title>
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0, width=device-width"
+                />
+            </Head>
             {products.map(product => (
                 <Link href={product.id}>
                     <Card>
@@ -46,8 +54,7 @@ const Home: React.FC<Props> = ({ products }) => {
                             color="text"
                             size="normal"
                             fontWeight={400}
-                        >
-                        </Heading>
+                        ></Heading>
                     </Card>
                 </Link>
             ))}

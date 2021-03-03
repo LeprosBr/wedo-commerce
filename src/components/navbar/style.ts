@@ -25,7 +25,6 @@ export const Nav = styled.nav`
 export const Aside = styled.nav`
     height: 50px;
     display: flex;
-    display: flex;
     margin: 0 auto;
     text-align: center;
     align-items: center;
@@ -40,6 +39,10 @@ export const Aside = styled.nav`
             margin: 0 10px;
             font-weight: 100;
         }
+    }
+
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
+        display: none;
     }
 `
 

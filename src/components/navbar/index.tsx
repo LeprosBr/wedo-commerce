@@ -7,6 +7,7 @@ import { Aside, Container, Nav, Search, Strong, Wrapper } from './style'
 
 const Info: React.FC = () => (
     <Aside>
+
         <strong>
             <span>Seja um Entregador</span>
             <span>Carreiras</span>

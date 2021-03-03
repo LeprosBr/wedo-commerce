@@ -22,7 +22,7 @@ export const Nav = styled.nav`
     }
 `
 
-export const Aside = styled.nav`
+export const Aside = styled.div`
     height: 50px;
     display: flex;
     margin: 0 auto;

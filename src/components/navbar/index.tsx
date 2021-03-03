@@ -2,12 +2,10 @@ import { Cart, SearchAlt, UserCircle } from '@styled-icons/boxicons-regular'
 import Link from 'next/link'
 import * as React from 'react'
 import wedoLogo from '../../assets/logo-wedo-medium.svg'
-import wedoLogoMini from '../../assets/logo-wedo-mini.svg'
 import { Aside, Container, Nav, Search, Strong, Wrapper } from './style'
 
 const Info: React.FC = () => (
     <Aside>
-
         <strong>
             <span>Seja um Entregador</span>
             <span>Carreiras</span>
@@ -28,7 +26,6 @@ const Form: React.FC = () => (
 )
 
 const Navbar: React.FC = () => {
-    const [logo, setLogo] = React.useState(wedoLogoMini)
     return (
         <>
             <Info />

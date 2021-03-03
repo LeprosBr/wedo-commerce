@@ -1,10 +1,32 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    margin: 1% auto;
+
+    > ul {
+        padding: 10px 16px;
+        list-style: none;
+        font-size: ${props => props.theme.sizes.xxsmall};
+        > li {
+            display: inline;
+
+            &:before {
+                padding: 8px;
+                color: black;
+                content: '/';
+            }
+        }
+    }
+`
+
+export const Wrapper = styled.div`
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin: 1% auto;
+    border-radius: 4px;
     padding: 20px 15px 50px 15px;
-    width: 100%;
+    background: ${props => props.theme.colors.primary};
 `
 
 export const Img = styled.div`
@@ -69,7 +91,6 @@ export const Payment = styled.div`
 
         > a {
             text-align: center;
-
         }
     }
 `

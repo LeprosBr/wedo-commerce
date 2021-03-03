@@ -3,8 +3,17 @@ import styled from 'styled-components'
 export const Container = styled.div`
     padding: 5%;
     display: flex;
+    margin: 1% auto;
     flex-wrap: wrap;
-    justify-content:center;
+    border-radius: 4px;
+    justify-content: center;
+    background: ${props => props.theme.colors.primary};
+
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
+        padding: 5% 0;
+        justify-content: start;
+        margin-bottom: 5%;
+    }
 `
 
 export const Card = styled.div`
@@ -20,14 +29,31 @@ export const Card = styled.div`
         box-shadow: 0 14px 28px ${props => props.theme.colors.background},
             0 10px 10px ${props => props.theme.colors.background};
     }
+
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
+        width: 45%;
+        height: 314px;
+    }
 `
 
 export const Img = styled.div`
     text-align: center;
     background: ${props => props.theme.colors.background};
     > img {
-        height: 224px;
         width: 100%;
+        height: 224px;
+        margin: 0 8px 16px;
+    }
+
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
+        display: flex;
+        height: 150px;
+        justify-content: center;
+
+        > img {
+            width: 100%;
+            height: 100%;
+        }
     }
 `
 

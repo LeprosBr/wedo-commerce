@@ -7,10 +7,14 @@ const theme = {
         primary: '#ffff',
         secondary: '#d3e0ea',
 
-        text: '#4c4c4c'
+        text: '#4c4c4c',
+
+        sucess: '#00a650',
+        link: '#1f4e96',
     },
 
     sizes: {
+        xxsmall: '0.8rem',
         xsmall: '1rem',
         small: '1.2rem',
         normal: '2.4rem',

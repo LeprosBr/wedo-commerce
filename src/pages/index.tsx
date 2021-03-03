@@ -37,10 +37,17 @@ const Home: React.FC<Props> = ({ products }) => {
                                 </Img>
                             ))}
                         <CardText>
-                        <Heading level={2} size="xsmall" color="text">
-                            {product.name}
-                        </Heading>
+                            <Heading level={2} size="xsmall" color="text">
+                                {product.name}
+                            </Heading>
                         </CardText>
+                        <Heading
+                            level={3}
+                            color="text"
+                            size="normal"
+                            fontWeight={400}
+                        >
+                        </Heading>
                     </Card>
                 </Link>
             ))}

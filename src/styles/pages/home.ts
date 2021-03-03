@@ -14,6 +14,11 @@ export const Card = styled.div`
     margin: 0 8px 16px;
     border-radius: 4px;
     border: 2px solid ${props => props.theme.colors.background};
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    &:hover {
+        box-shadow: 0 14px 28px ${props => props.theme.colors.background},
+            0 10px 10px ${props => props.theme.colors.background};
+    }
 `
 
 export const Img = styled.div`
@@ -27,6 +32,7 @@ export const Img = styled.div`
 export const CardText = styled.div`
     width: 100%;
     padding: 5%;
+    height: 100px;
     text-align: justify;
     > h2 {
         overflow: hidden;

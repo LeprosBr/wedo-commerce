@@ -5,11 +5,11 @@ const SEO: React.FC = () => {
     return (
         <Head>
             <meta charSet="utf-8" />
-            <meta name="description" content="{description}" />
-            <meta property="og:type" content="website" />
             <meta property="og:title" content="Wedo" />
-            <meta property="og:description" content="{description}" />
-            <meta property="og:site_name" content="{siteTitle}" />
+            <meta property="og:type" content="website" />
+            <meta name="description" content="e-commerce" />
+            <meta property="og:site_name" content="Wedo Market" />
+            <meta property="og:description" content="e-commerce" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link
                 href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"

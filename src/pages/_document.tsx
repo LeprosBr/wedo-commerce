@@ -9,10 +9,6 @@ import Document, {
 import { ServerStyleSheet } from 'styled-components'
 import SEO from '../components/SEO'
 
-const titles = 'Wedo Shop'
-const siteTitle = 'Compra e venda de medicamentos'
-const description = 'técnica e criativa'
-
 class MyDocument extends Document {
     static async getInitialProps(
         ctx: DocumentContext

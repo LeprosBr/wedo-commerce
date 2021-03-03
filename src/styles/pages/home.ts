@@ -4,6 +4,7 @@ export const Container = styled.div`
     padding: 5%;
     display: flex;
     flex-wrap: wrap;
+    justify-content:center;
 `
 
 export const Card = styled.div`
@@ -26,6 +27,7 @@ export const Img = styled.div`
     background: ${props => props.theme.colors.background};
     > img {
         height: 224px;
+        width: 100%;
     }
 `
 

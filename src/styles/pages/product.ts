@@ -14,6 +14,7 @@ export const Img = styled.div`
     height: 300px;
     > img {
         width: 300px;
+        height: 100%;
     }
 `
 

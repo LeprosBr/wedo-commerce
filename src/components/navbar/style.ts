@@ -2,7 +2,24 @@ import styled from 'styled-components'
 
 export const Nav = styled.nav`
     height: 100px;
+    /* overflow: hidden; */
     background-color: ${props => props.theme.colors.primary};
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
+        bottom: 0;
+        height: 55px;
+        width: 100%;
+        position: fixed;
+        background: ${props => props.theme.colors.secondary};
+
+        img,
+        form {
+            display: none;
+        }
+
+        > div {
+            width: 100%;
+        }
+    }
 `
 
 export const Aside = styled.nav`
@@ -90,5 +107,33 @@ export const Strong = styled.nav`
         > svg {
             width: 25px;
         }
+    }
+
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
+        width: 100%;
+
+        > button {
+            > svg {
+                width: 35px;
+            }
+        }
+    }
+`
+export const Search = styled.button`
+    display: none;
+
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        background: ${props => props.theme.colors.sucess} !important;
+        border: 8px solid ${props => props.theme.colors.primary} !important;
+        > svg {
+            color: ${props => props.theme.colors.background} !important;
+        }
+        margin-bottom: 45px !important;
     }
 `

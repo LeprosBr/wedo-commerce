@@ -6,7 +6,6 @@ const Footer = () => {
         <>
             <Container>
                 <Wrapper>
-
                     Footer
                 </Wrapper>
             </Container>

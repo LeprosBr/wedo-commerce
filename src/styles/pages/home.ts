@@ -2,17 +2,29 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     padding: 5%;
-    display: flex;
+    /* display: flex; */
     margin: 1% auto;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     border-radius: 4px;
-    justify-content: center;
+    /* justify-content: center; */
     background: ${props => props.theme.colors.primary};
 
+    > div {
+        margin-top: 4%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+    }
+
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
-        padding: 5% 0;
-        justify-content: start;
-        margin-bottom: 5%;
+        padding: 4% ;
+
+        > div {
+            justify-content: start;
+            margin-bottom: 5%;
+        }
     }
 `
 
@@ -32,7 +44,8 @@ export const Card = styled.div`
 
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
         width: 45%;
-        height: 314px;
+        height: 300px;
+
     }
 `
 
@@ -47,7 +60,7 @@ export const Img = styled.div`
 
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
         display: flex;
-        height: 150px;
+        height: 130px;
         justify-content: center;
 
         > img {

@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
                     <Form />
                     <Strong>
                         <button>
-                            <Cart /> carrinho
+                            <UserCircle /> Entrar
                         </button>
 
                         <Search>
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
                         </Search>
 
                         <button>
-                            <UserCircle /> Entrar
+                            <Cart /> carrinho
                         </button>
                     </Strong>
                 </Wrapper>

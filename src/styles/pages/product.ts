@@ -27,6 +27,12 @@ export const Wrapper = styled.div`
     border-radius: 4px;
     padding: 20px 15px 50px 15px;
     background: ${props => props.theme.colors.primary};
+
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
+        display: block;
+        border-radius: 0;
+
+    }
 `
 
 export const Img = styled.div`
@@ -92,6 +98,10 @@ export const Payment = styled.div`
         > a {
             text-align: center;
         }
+    }
+
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
+        width: 100%;
     }
 `
 

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Footer, Navbar } from '../index'
+import { Navbar } from '../index'
 import { Container, Wrapper } from './styles'
 
 const Layout: React.FunctionComponent = ({ children }) => {
@@ -7,7 +7,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
         <Container>
             <Navbar />
             <Wrapper>{children}</Wrapper>
-            <Footer />
+            {/* <Footer /> */}
         </Container>
     )
 }

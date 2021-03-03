@@ -51,9 +51,21 @@ const Product: React.FC<Props> = ({ product }) => {
             </Img>
 
             <Text>
-                <Heading level={1} fontWeight={700} size="small">
-                    {product.name}
-                </Heading>
+                <div>
+                    <Heading level={1} fontWeight={700} size="small">
+                        {product.name}
+                    </Heading>
+                </div>
+
+                <div>
+                    <Heading level={3} fontWeight={700} size="xsmall">
+                        O que você precisa saber sobre este produto
+                    </Heading>
+
+                    <Heading level={4} fontWeight={100} size="xsmall">
+                        {product.description}
+                    </Heading>
+                </div>
             </Text>
 
             <Payments />

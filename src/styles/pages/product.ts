@@ -22,6 +22,13 @@ export const Text = styled.div`
     flex: 2;
     text-align: center;
     text-align: justify;
+
+    > div {
+        margin-bottom: 50px;
+        > h4 {
+            margin-top: 20px;
+        }
+    }
 `
 
 export const Payment = styled.div`

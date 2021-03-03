@@ -7,7 +7,7 @@ const theme = {
         primary: '#ffff',
         secondary: '#d3e0ea',
 
-        text: '#383E71'
+        text: '#4c4c4c'
     },
 
     sizes: {
@@ -48,7 +48,7 @@ export const Heading = styled('h1').attrs<HeadingProps>(({ level }) => ({
         lineHeight = 1.5
     }) => css`
         font-size: ${theme.sizes[size]};
-        color: ${theme.sizes[color]};
+        color: ${theme.colors[color]};
         font-weight: ${fontWeight};
         line-height: ${lineHeight};
     `}

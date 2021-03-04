@@ -60,7 +60,7 @@ export const Card = styled.div`
 
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
         width: 45%;
-        height: 300px;
+        height: 265px;
 
         .cardImg {
             display: flex;

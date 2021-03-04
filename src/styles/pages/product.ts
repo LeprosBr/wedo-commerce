@@ -53,6 +53,9 @@ export const Wrapper = styled.div`
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
         display: block;
         border-radius: 0;
+        .productContent {
+            margin-top: 20px;
+        }
     }
 `
 export const Section = styled.section`

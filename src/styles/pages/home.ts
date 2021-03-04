@@ -1,19 +1,17 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    width: 100%;
     padding: 5%;
-    /* display: flex; */
     margin: 1% auto;
-    /* flex-wrap: wrap; */
-    border-radius: 4px;
-    /* justify-content: center; */
     background: ${props => props.theme.colors.primary};
 
     > div {
         margin-top: 4%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: start;
+
 
 
     }
@@ -22,7 +20,6 @@ export const Container = styled.div`
         padding: 4% ;
 
         > div {
-            justify-content: start;
             margin-bottom: 5%;
         }
     }

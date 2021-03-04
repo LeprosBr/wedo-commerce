@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
 import Stripe from 'stripe'
 import stripeConfig from '../../config/stripe'
-import { Card, CardText, Container, Img } from '../styles/pages/home'
+import Product from '../components/product'
+import { Container } from '../styles/pages/home'
 import { Heading } from '../styles/theme'
 interface Props {
     products: Stripe.Product[]
@@ -41,27 +41,7 @@ const Home: React.FC<Props> = ({ products }) => {
 
             <div>
                 {products.map(product => (
-                    <Link href={product.id}>
-                        <Card>
-                            {product.images &&
-                                product.images.map(img => (
-                                    <Img>
-                                        <img key={img} src={img} />
-                                    </Img>
-                                ))}
-                            <CardText>
-                                <Heading level={2} size="xsmall" color="text">
-                                    {product.name}
-                                </Heading>
-                            </CardText>
-                            <Heading
-                                level={3}
-                                color="text"
-                                size="normal"
-                                fontWeight={400}
-                            ></Heading>
-                        </Card>
-                    </Link>
+                    <Product product={product} />
                 ))}
             </div>
         </Container>

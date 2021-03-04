@@ -1,17 +1,11 @@
 import { CreditCard } from '@styled-icons/boxicons-regular'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import Stripe from 'stripe'
 import stripeConfig from '../../config/stripe'
-import {
-    Box,
-    Container,
-    Img,
-    Payment,
-    Text,
-    Wrapper
-} from '../styles/pages/product'
+import { Container, Section, Wrapper } from '../styles/pages/product'
 import { Heading } from '../styles/theme'
 
 interface Props {
@@ -52,8 +46,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 const Payments: React.FC = () => (
-    <Box>
-        <Payment>
+    <div>
+        <Section>
             <Heading level={2} fontWeight={400} size="xsmall" color="sucess">
                 Frete grátis LPRS FULL
             </Heading>
@@ -83,8 +77,8 @@ const Payments: React.FC = () => (
                     12.0 meses de garantia de fábrica.
                 </Heading>
             </strong>
-        </Payment>
-        <Payment>
+        </Section>
+        <Section>
             <Heading level={4} fontWeight={100} size="xsmall">
                 Meios de pagamento
             </Heading>
@@ -99,11 +93,11 @@ const Payments: React.FC = () => (
                     Conheça outros meios de pagamento
                 </a>
             </strong>
-        </Payment>
-    </Box>
+        </Section>
+    </div>
 )
 
-const Breadcrumbs: React.FC<Props> = ({product}) => (
+const Breadcrumbs: React.FC<Props> = ({ product }) => (
     <ul>
         <li>
             <Link href="/">Home</Link>
@@ -121,21 +115,29 @@ const Product: React.FC<Props> = ({ product }) => {
     // console.log(product)
     return (
         <Container>
+            <Head>
+                <title>{product.name}</title>
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0, width=device-width"
+                />
+            </Head>
             <Breadcrumbs product={product} />
             <Wrapper>
-                <Head>
-                    <title>{product.name}</title>
-                    <meta
-                        name="viewport"
-                        content="initial-scale=1.0, width=device-width"
-                    />
-                </Head>
-                <Img>
+                <div className="productImg">
                     {product.images &&
-                        product.images.map(img => <img key={img} src={img} />)}
-                </Img>
+                        product.images.map(img => (
+                            <Image
+                                key={img.length}
+                                src={img}
+                                alt={product.name}
+                                width={600}
+                                height={600}
+                            />
+                        ))}
+                </div>
 
-                <Text>
+                <div className="productContent">
                     <div>
                         <Heading level={1} fontWeight={700} size="small">
                             {product.name}
@@ -151,7 +153,7 @@ const Product: React.FC<Props> = ({ product }) => {
                             {product.description}
                         </Heading>
                     </div>
-                </Text>
+                </div>
 
                 <Payments />
             </Wrapper>

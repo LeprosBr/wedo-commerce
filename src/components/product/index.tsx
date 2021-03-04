@@ -9,6 +9,7 @@ interface Props {
 }
 
 const Product: React.FC<Props> = ({ product }) => {
+
     return (
         <Link href={product.id} key={product.id}>
             <Card>
@@ -33,8 +34,16 @@ const Product: React.FC<Props> = ({ product }) => {
                         {product.name}
                     </Heading>
                     <div>
-                        <strong>R$ 10,00</strong>
-                        <label>Termina em 2 dias</label>
+                        <strong>
+                            R$ {Math.floor(Math.random() * 10)+1},
+                            {Math.floor(
+                                Math.random() * Math.floor(Math.random() * 10)
+                            )}
+                            0
+                        </strong>
+                        <label>
+                            Termina em {Math.floor(Math.random() * 10) + 1} dias
+                        </label>
                     </div>
                 </div>
             </Card>

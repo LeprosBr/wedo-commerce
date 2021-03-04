@@ -28,39 +28,34 @@ export const Wrapper = styled.div`
     padding: 20px 15px 50px 15px;
     background: ${props => props.theme.colors.primary};
 
+    .productImg {
+        flex: 2;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        background: ${props => props.theme.colors.background};
+    }
+
+    .productContent {
+        padding: 0 5%;
+        flex: 2;
+        text-align: center;
+        text-align: justify;
+
+        > div {
+            margin-bottom: 50px;
+            > h4 {
+                margin-top: 20px;
+            }
+        }
+    }
+
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
         display: block;
         border-radius: 0;
-
     }
 `
-
-export const Img = styled.div`
-    flex: 1;
-    text-align: center;
-    background: ${props => props.theme.colors.background};
-    height: 300px;
-    > img {
-        width: 300px;
-        height: 100%;
-    }
-`
-
-export const Text = styled.div`
-    padding: 0 5%;
-    flex: 2;
-    text-align: center;
-    text-align: justify;
-
-    > div {
-        margin-bottom: 50px;
-        > h4 {
-            margin-top: 20px;
-        }
-    }
-`
-
-export const Payment = styled.div`
+export const Section = styled.section`
     padding: 20px 10px;
     margin-bottom: 20px;
     width: 280px;
@@ -68,6 +63,7 @@ export const Payment = styled.div`
     text-align: justify;
     border-radius: 8px;
     border: 2px solid ${props => props.theme.colors.background};
+    flex: 1;
 
     > strong {
         margin-top: 20px;
@@ -103,8 +99,4 @@ export const Payment = styled.div`
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
         width: 100%;
     }
-`
-
-export const Box = styled.div`
-    flex: 1;
 `

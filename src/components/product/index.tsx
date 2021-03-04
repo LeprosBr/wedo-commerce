@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import Stripe from 'stripe'
 import { Heading } from '../../styles/theme'
@@ -14,7 +15,12 @@ const Product: React.FC<Props> = ({ product }) => {
                 {product.images &&
                     product.images.map(img => (
                         <div className="cardImg" key={img.length}>
-                            <img key={img} src={img} />
+                            <Image
+                                src={img}
+                                alt={product.name}
+                                width={500}
+                                height={500}
+                            />
                         </div>
                     ))}
                 <div className="cardContent">

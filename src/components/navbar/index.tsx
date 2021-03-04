@@ -1,7 +1,5 @@
 import { Cart, SearchAlt, UserCircle } from '@styled-icons/boxicons-regular'
-import Link from 'next/link'
 import * as React from 'react'
-import wedoLogo from '../../assets/logo-wedo-medium.svg'
 import { Aside, Container, Nav, Search, Strong, Wrapper } from './style'
 
 const Info: React.FC = () => (
@@ -31,9 +29,9 @@ const Navbar: React.FC = () => {
             <Info />
             <Nav>
                 <Wrapper>
-                    <Link href="/">
+                    {/* <Link href="/">
                         <img src={wedoLogo} alt="Wedo Logo" />
-                    </Link>
+                    </Link> */}
                     <Form />
                     <Strong>
                         <button>

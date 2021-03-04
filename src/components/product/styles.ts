@@ -12,8 +12,9 @@ export const Card = styled.div`
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
     .cardImg {
-        text-align: center;
         height: 165px;
+        padding: 10px;
+        text-align: center;
         background: ${props => props.theme.colors.background};
         > img {
             width: 100%;

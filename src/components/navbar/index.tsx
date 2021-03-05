@@ -1,6 +1,10 @@
-import { Cart, SearchAlt, UserCircle } from '@styled-icons/boxicons-regular'
+import { CartAlt, SearchAlt, UserCircle } from '@styled-icons/boxicons-regular'
+import Image from 'next/image'
+import Link from 'next/link'
 import * as React from 'react'
-import { Aside, Container, Nav, Search, Strong, Wrapper } from './style'
+import wedoLogo from '../../assets/logo-wedo-medium.svg'
+import { Heading } from '../../styles/theme'
+import { Aside, Nav, Wrapper } from './style'
 
 const Info: React.FC = () => (
     <Aside>
@@ -14,12 +18,10 @@ const Info: React.FC = () => (
 
 const Form: React.FC = () => (
     <form>
-        <Container>
-            <input type="text" placeholder="Pesquisar" name="search" />
-            <button type="submit">
-                <SearchAlt />
-            </button>
-        </Container>
+        <input type="text" placeholder="Pesquisar" name="search" />
+        <button type="submit">
+            <SearchAlt />
+        </button>
     </form>
 )
 
@@ -29,23 +31,37 @@ const Navbar: React.FC = () => {
             <Info />
             <Nav>
                 <Wrapper>
-                    {/* <Link href="/">
-                        <img src={wedoLogo} alt="Wedo Logo" />
-                    </Link> */}
+                    <section>
+                        <Link href="/">
+                            <Image
+                                src={wedoLogo}
+                                alt="Logo Wedo"
+                                width={150}
+                                height={50}
+                            />
+                        </Link>
+                    </section>
                     <Form />
-                    <Strong>
-                        <button>
-                            <UserCircle /> Entrar
-                        </button>
+                    <section className="mobile">
+                        <div>
+                            <button className="mobileBtn">
+                                <SearchAlt />
+                            </button>
 
-                        <Search>
-                            <SearchAlt />
-                        </Search>
-
-                        <button>
-                            <Cart /> carrinho
-                        </button>
-                    </Strong>
+                            <button className="cartBtn">
+                                <CartAlt />
+                                <Heading level={6} size="xsmall">
+                                    carrinho
+                                </Heading>
+                            </button>
+                            <button>
+                                <UserCircle />
+                                <Heading level={6} size="xsmall">
+                                    entrar
+                                </Heading>
+                            </button>
+                        </div>
+                    </section>
                 </Wrapper>
             </Nav>
         </>

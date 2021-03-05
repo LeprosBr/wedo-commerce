@@ -63,6 +63,7 @@ export const Card = styled.div`
         height: 265px;
 
         .cardImg {
+            padding: 0;
             display: flex;
             height: 130px;
             justify-content: center;

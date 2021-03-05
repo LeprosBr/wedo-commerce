@@ -1,29 +1,137 @@
 import styled from 'styled-components'
 
 export const Nav = styled.nav`
-    height: 100px;
-    /* overflow: hidden; */
+    width: 100%;
+    display: flex;
+    height: 80px;
     background-color: ${props => props.theme.colors.primary};
+    justify-content: space-between;
+
+    svg {
+        width: 25px;
+    }
+
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
         bottom: 0;
-        height: 55px;
         width: 100%;
+        height: 60px;
         position: fixed;
-        background: ${props => props.theme.colors.secondary};
+    }
+`
 
-        img,
+export const Wrapper = styled.div`
+    width: 100%;
+    padding: 0 1%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    max-width: ${props => props.theme.breakpoints.medium};
+
+    > section {
+        flex: 1;
+        cursor: pointer;
+
+        > div {
+            text-align: end;
+            display: flex;
+            justify-content: flex-end;
+
+            > button {
+                border: 0;
+                display: flex;
+                margin: 0 10px;
+                background-color: hsl(0deg 0% 100% / 8%);
+                font-size: ${props => props.theme.sizes.xsmall};
+
+                > h6 {
+                    margin-left: 5px;
+                    text-transform: capitalize;
+                }
+            }
+
+            .mobileBtn {
+                display: none;
+            }
+        }
+    }
+
+    > form {
+        flex: 2;
+        width: 100%;
+        display: flex;
+
+        > input {
+            border: 0;
+            width: 90%;
+            padding: 2px 6px;
+            text-align: inherit;
+            background-color: transparent;
+            font-size: ${props => props.theme.sizes.small};
+        }
+
+        > button {
+            border: 0;
+            margin: 0;
+            width: 10%;
+            padding: 5px;
+            border-left: 1px solid ${props => props.theme.colors.text};
+        }
+
+        background-color: ${props => props.theme.colors.background};
+    }
+
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
         form {
             display: none;
         }
 
-        > div {
+        > section {
             width: 100%;
+            display: none;
+        }
+
+        .mobile {
+            height: 100%;
+            display: flex;
+            padding: 0 1%;
+            border-top: 1px solid ${props => props.theme.colors.text};
+
+            > div {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                > button {
+                    margin: 0;
+                    display: flex;
+                    margin: 0 auto;
+                    align-items: center;
+                    justify-content: center;
+
+                    > h6 {
+                        display: none;
+                    }
+                }
+            }
+
+            .cartBtn {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: ${props => props.theme.colors.sucess};
+                color: ${props => props.theme.colors.primary};
+            }
+
+            .mobileBtn {
+                display: block;
+            }
         }
     }
 `
 
 export const Aside = styled.div`
-    height: 50px;
+    height: 40px;
     display: flex;
     margin: 0 auto;
     text-align: center;
@@ -34,6 +142,7 @@ export const Aside = styled.div`
     > strong {
         display: flex;
         justify-content: space-between;
+        font-size: ${props => props.theme.sizes.xxsmall};
 
         > span {
             margin: 0 10px;
@@ -43,100 +152,5 @@ export const Aside = styled.div`
 
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
         display: none;
-    }
-`
-
-export const Wrapper = styled.div`
-    height: 100%;
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    max-width: ${props => props.theme.breakpoints.medium};
-
-    > img {
-        width: 150px;
-        cursor: pointer;
-    }
-
-    > form {
-        width: 45vw;
-        margin: 0 20px 0 40px;
-    }
-`
-
-export const Container = styled.form`
-    align-items: center;
-    background-color: ${props => props.theme.colors.background};
-    display: flex;
-    padding: 2px 6px;
-    border: 1px solid;
-    flex-grow: 2;
-
-    > input {
-        width: 100%;
-        max-width: 100%;
-        padding: 2px 6px;
-        margin-left: 4px;
-        border: 0;
-        text-align: inherit;
-        background-color: transparent;
-        font-size: ${props => props.theme.sizes.small};
-    }
-
-    > button {
-        border: 0;
-        width: 45px;
-        padding: 5px;
-        border-left: 1px solid rgb(48 48 48);
-        margin: 0;
-        > svg {
-            width: 25px;
-        }
-    }
-`
-
-export const Strong = styled.nav`
-    width: 20vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    > button {
-        border: 0;
-        margin: 0 10px;
-        text-transform: capitalize;
-        background-color: hsl(0deg 0% 100% / 8%);
-        font-size: ${props => props.theme.sizes.xsmall};
-        > svg {
-            width: 25px;
-        }
-    }
-
-    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
-        width: 100%;
-
-        > button {
-            > svg {
-                width: 35px;
-            }
-        }
-    }
-`
-export const Search = styled.button`
-    display: none;
-
-    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
-        width: 80px;
-        height: 80px;
-        display: flex;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-        background: ${props => props.theme.colors.sucess} !important;
-        border: 8px solid ${props => props.theme.colors.primary} !important;
-        > svg {
-            color: ${props => props.theme.colors.background} !important;
-        }
-        margin-bottom: 45px !important;
     }
 `

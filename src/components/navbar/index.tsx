@@ -1,4 +1,10 @@
-import { CartAlt, SearchAlt, UserCircle } from '@styled-icons/boxicons-regular'
+import {
+    CartAlt,
+    Home,
+    SearchAlt,
+    UserCircle
+} from '@styled-icons/boxicons-regular'
+import { FavoriteBorder as Favorite } from '@styled-icons/material/FavoriteBorder'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as React from 'react'
@@ -44,6 +50,11 @@ const Navbar: React.FC = () => {
                     <Form />
                     <section className="mobile">
                         <div>
+                            <Link href="/">
+                                <button className="mobileBtn">
+                                    <Home />
+                                </button>
+                            </Link>
                             <button className="mobileBtn">
                                 <SearchAlt />
                             </button>
@@ -54,6 +65,11 @@ const Navbar: React.FC = () => {
                                     carrinho
                                 </Heading>
                             </button>
+
+                            <button className="mobileBtn">
+                                <Favorite />
+                            </button>
+
                             <button>
                                 <UserCircle />
                                 <Heading level={6} size="xsmall">

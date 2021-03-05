@@ -95,6 +95,7 @@ export const Wrapper = styled.div`
             display: flex;
             padding: 0 1%;
             border-top: 1px solid ${props => props.theme.colors.text};
+            background-color: ${props => props.theme.colors.primary};
 
             > div {
                 width: 100%;

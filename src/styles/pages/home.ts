@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     width: 100%;
-    padding: 5%;
+    padding: 3% 2%;
     margin: 1% auto;
     background: ${props => props.theme.colors.primary};
 
@@ -11,13 +11,10 @@ export const Container = styled.div`
         display: flex;
         flex-wrap: wrap;
         justify-content: start;
-
-
-
     }
 
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
-        padding: 4% ;
+        padding: 4%;
 
         > div {
             margin-bottom: 5%;
@@ -42,7 +39,6 @@ export const Card = styled.div`
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
         width: 45%;
         height: 300px;
-
     }
 `
 

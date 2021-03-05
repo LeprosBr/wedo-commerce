@@ -29,7 +29,7 @@ const Home: React.FC<Props> = ({ products }) => {
     return (
         <Container>
             <Head>
-                <title>Wedo | Compre Agora</title>
+                <title>Wedo Market | Home </title>
                 <meta
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"

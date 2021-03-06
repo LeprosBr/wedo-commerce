@@ -16,6 +16,7 @@ export const Nav = styled.nav`
         width: 100%;
         height: 60px;
         position: fixed;
+        z-index: 9;
     }
 `
 

@@ -48,6 +48,14 @@ const Footer: React.FC<Props> = () => {
                         </ul>
                     </section>
                 </div>
+                <div className="copyright">
+                    <Heading level={6} size="xxsmall" fontWeight={700}>
+                        Wedo Pet Market S/A - CNPJ 19.420.555/0013-55 -
+                        Endereço: Rua Rua Paraná Pixuna Centro, 135 - Manaus -
+                        AM - CEP: 69020-260 Copyright© 2021 Wedo Pet Market S/A
+                        - Todos os direitos reservados
+                    </Heading>
+                </div>
             </Wrapper>
         </Container>
     )

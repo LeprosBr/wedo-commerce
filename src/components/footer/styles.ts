@@ -14,7 +14,7 @@ export const Container = styled.footer`
 export const Wrapper = styled.div`
     width: 100%;
     margin: 0 auto;
-    padding: 2% 1%;
+    padding: 2% 1% 1% 0;
     max-width: ${props => props.theme.breakpoints.medium};
 
     > div {
@@ -37,6 +37,11 @@ export const Wrapper = styled.div`
                 }
             }
         }
+    }
+
+    .copyright {
+        padding-top: 2%;
+        text-align: center;
     }
 
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {

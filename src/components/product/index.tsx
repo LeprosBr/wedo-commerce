@@ -1,7 +1,9 @@
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import Stripe from 'stripe'
 import { Heading } from '../../styles/theme'
+import { fadeInUp } from '../animate/cardList'
 import { Card } from './styles'
 
 interface Props {
@@ -9,10 +11,9 @@ interface Props {
 }
 
 const Product: React.FC<Props> = ({ product }) => {
-
     return (
         <Link href={product.id} key={product.id}>
-            <Card>
+            <Card as={motion.div} variants={fadeInUp}>
                 {product.images &&
                     product.images.map(img => (
                         <div className="cardImg" key={img.length}>
@@ -35,7 +36,7 @@ const Product: React.FC<Props> = ({ product }) => {
                     </Heading>
                     <div>
                         <strong>
-                            R$ {Math.floor(Math.random() * 10)+1},
+                            R$ {Math.floor(Math.random() * 10) + 1},
                             {Math.floor(
                                 Math.random() * Math.floor(Math.random() * 10)
                             )}

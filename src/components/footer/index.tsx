@@ -4,6 +4,7 @@ import Medal from '../../assets/safety/medalha_ouro_otima.png'
 import { Props } from '../../data/footer'
 import { Heading } from '../../styles/theme'
 import { Container, Wrapper } from './styles'
+
 const Footer: React.FC<Props> = () => {
     return (
         <Container>

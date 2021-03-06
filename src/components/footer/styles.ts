@@ -5,7 +5,9 @@ export const Container = styled.footer`
     border-top: 1px solid ${props => props.theme.colors.secondary};
 
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
-        display: none;
+        height: 59px;
+        border-top: 0;
+        background-color: transparent;
     }
 `
 
@@ -35,5 +37,9 @@ export const Wrapper = styled.div`
                 }
             }
         }
+    }
+
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
+        display: none;
     }
 `

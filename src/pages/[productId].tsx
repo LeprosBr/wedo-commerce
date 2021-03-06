@@ -6,7 +6,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Stripe from 'stripe'
 import stripeConfig from '../../config/stripe'
-import { Layout } from '../components'
 import { Container, Section, Wrapper } from '../styles/pages/product'
 import { Heading } from '../styles/theme'
 
@@ -117,64 +116,50 @@ const Product: React.FC<Props> = ({ product }) => {
     // console.log(product)
     return (
         <motion.div exit={{ opacity: 0 }} transition={{ duration: 1 }}>
-            <Layout>
-                <Container>
-                    <Head>
-                        <title>{product.name}</title>
-                        <meta
-                            name="viewport"
-                            content="initial-scale=1.0, width=device-width"
-                        />
-                    </Head>
-                    <Breadcrumbs product={product} />
-                    <Wrapper>
-                        <div className="productImg">
-                            {product.images &&
-                                product.images.map(img => (
-                                    <Image
-                                        key={img.length}
-                                        src={img}
-                                        alt={product.name}
-                                        width={600}
-                                        height={600}
-                                    />
-                                ))}
+            <Container>
+                <Head>
+                    <title>{product.name}</title>
+                    <meta
+                        name="viewport"
+                        content="initial-scale=1.0, width=device-width"
+                    />
+                </Head>
+                <Breadcrumbs product={product} />
+                <Wrapper>
+                    <div className="productImg">
+                        {product.images &&
+                            product.images.map(img => (
+                                <Image
+                                    key={img.length}
+                                    src={img}
+                                    alt={product.name}
+                                    width={600}
+                                    height={600}
+                                />
+                            ))}
+                    </div>
+
+                    <div className="productContent">
+                        <div>
+                            <Heading level={1} fontWeight={700} size="small">
+                                {product.name}
+                            </Heading>
                         </div>
 
-                        <div className="productContent">
-                            <div>
-                                <Heading
-                                    level={1}
-                                    fontWeight={700}
-                                    size="small"
-                                >
-                                    {product.name}
-                                </Heading>
-                            </div>
+                        <div>
+                            <Heading level={3} fontWeight={700} size="xsmall">
+                                O que você precisa saber sobre este produto
+                            </Heading>
 
-                            <div>
-                                <Heading
-                                    level={3}
-                                    fontWeight={700}
-                                    size="xsmall"
-                                >
-                                    O que você precisa saber sobre este produto
-                                </Heading>
-
-                                <Heading
-                                    level={4}
-                                    fontWeight={100}
-                                    size="xsmall"
-                                >
-                                    {product.description}
-                                </Heading>
-                            </div>
+                            <Heading level={4} fontWeight={100} size="xsmall">
+                                {product.description}
+                            </Heading>
                         </div>
+                    </div>
 
-                        <Payments />
-                    </Wrapper>
-                </Container>
-            </Layout>
+                    <Payments />
+                </Wrapper>
+            </Container>
         </motion.div>
     )
 }

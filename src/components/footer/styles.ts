@@ -17,15 +17,21 @@ export const Wrapper = styled.div`
 
     > div {
         display: flex;
-        margin: 0 5px;
-
+        justify-content: center;
         > section {
             flex: 1;
+            margin: 0 5px;
+            text-align: start;
             > ul {
-                margin: 10px 5px 0;
                 list-style: none;
+
                 > li {
-                    margin: 5px 0;
+                    margin: 12px 0;
+                }
+
+                .imgLogo {
+                    margin-top: 20px;
+                    text-align: center;
                 }
             }
         }

@@ -17,10 +17,12 @@ export const Wrapper = styled.div`
 
     > div {
         display: flex;
+        margin: 0 5px;
+
         > section {
             flex: 1;
             > ul {
-                margin-top: 10px;
+                margin: 10px 5px 0;
                 list-style: none;
                 > li {
                     margin: 5px 0;

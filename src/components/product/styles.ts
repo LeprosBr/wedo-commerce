@@ -76,3 +76,4 @@ export const Card = styled(motion.div)`
         }
     }
 `
+

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Stripe from 'stripe'
 import { Heading } from '../../styles/theme'
-import { fadeInUp } from '../animate/cardList'
+import { fadeImg, fadeInUp } from '../animate'
 import { Card } from './styles'
 
 interface Props {
@@ -13,17 +13,22 @@ interface Props {
 const Product: React.FC<Props> = ({ product }) => {
     return (
         <Link href={product.id} key={product.id}>
-            <Card as={motion.div} variants={fadeInUp}>
+            <Card as={motion.div} variants={fadeInUp} whileTap={{ scale: 0.9 }}>
                 {product.images &&
                     product.images.map(img => (
-                        <div className="cardImg" key={img.length}>
+                        <motion.div
+                            variants={fadeImg}
+                            className="cardImg"
+                            key={img.length}
+                            transition={{ delay: 0.2 }}
+                        >
                             <Image
                                 src={img}
                                 alt={product.name}
                                 width={500}
                                 height={500}
                             />
-                        </div>
+                        </motion.div>
                     ))}
                 <div className="cardContent">
                     <Heading

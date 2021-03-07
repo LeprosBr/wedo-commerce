@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Stripe from 'stripe'
 import stripeConfig from '../../config/stripe'
+import { fadeInUp, stagger } from '../components/animate'
 import { Container, Section, Wrapper } from '../styles/pages/product'
 import { Heading } from '../styles/theme'
 
@@ -46,8 +47,72 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
 }
 
+const Product: React.FC<Props> = ({ product }) => {
+    // console.log(product)
+    return (
+        <Container
+            as={motion.div}
+            initial="initial"
+            animate="animate"
+            exit={{ opacity: 0 }}
+        >
+            <Head>
+                <title>{product.name}</title>
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0, width=device-width"
+                />
+            </Head>
+            <Breadcrumbs product={product} />
+            <Wrapper variants={stagger}>
+                <div className="productImg">
+                    {product.images &&
+                        product.images.map(img => (
+                            <motion.div
+                                initial={{ x: -200, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ delay: 0.2 }}
+                            >
+                                <Image
+                                    key={img.length}
+                                    src={img}
+                                    alt={product.name}
+                                    width={600}
+                                    height={600}
+                                />
+                            </motion.div>
+                        ))}
+                </div>
+
+                <div className="productContent">
+                    <motion.div variants={fadeInUp}>
+                        <Heading level={1} fontWeight={700} size="small">
+                            {product.name}
+                        </Heading>
+                    </motion.div>
+
+                    <motion.div variants={fadeInUp}>
+                        <Heading level={3} fontWeight={700} size="xsmall">
+                            O que você precisa saber sobre este produto
+                        </Heading>
+
+                        <Heading level={4} fontWeight={100} size="xsmall">
+                            {product.description}
+                        </Heading>
+                    </motion.div>
+                </div>
+
+                <Payments />
+            </Wrapper>
+        </Container>
+    )
+}
+
+export default Product
+
 const Payments: React.FC = () => (
-    <div>
+    <motion.div variants={fadeInUp}>
         <Section>
             <Heading level={2} fontWeight={400} size="xsmall" color="sucess">
                 Frete grátis LPRS FULL
@@ -95,7 +160,7 @@ const Payments: React.FC = () => (
                 </a>
             </strong>
         </Section>
-    </div>
+    </motion.div>
 )
 
 const Breadcrumbs: React.FC<Props> = ({ product }) => (
@@ -111,57 +176,3 @@ const Breadcrumbs: React.FC<Props> = ({ product }) => (
         </li>
     </ul>
 )
-
-const Product: React.FC<Props> = ({ product }) => {
-    // console.log(product)
-    return (
-        <motion.div exit={{ opacity: 0 }} transition={{ duration: 1 }}>
-            <Container>
-                <Head>
-                    <title>{product.name}</title>
-                    <meta
-                        name="viewport"
-                        content="initial-scale=1.0, width=device-width"
-                    />
-                </Head>
-                <Breadcrumbs product={product} />
-                <Wrapper>
-                    <div className="productImg">
-                        {product.images &&
-                            product.images.map(img => (
-                                <Image
-                                    key={img.length}
-                                    src={img}
-                                    alt={product.name}
-                                    width={600}
-                                    height={600}
-                                />
-                            ))}
-                    </div>
-
-                    <div className="productContent">
-                        <div>
-                            <Heading level={1} fontWeight={700} size="small">
-                                {product.name}
-                            </Heading>
-                        </div>
-
-                        <div>
-                            <Heading level={3} fontWeight={700} size="xsmall">
-                                O que você precisa saber sobre este produto
-                            </Heading>
-
-                            <Heading level={4} fontWeight={100} size="xsmall">
-                                {product.description}
-                            </Heading>
-                        </div>
-                    </div>
-
-                    <Payments />
-                </Wrapper>
-            </Container>
-        </motion.div>
-    )
-}
-
-export default Product

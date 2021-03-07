@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
     margin: 1% auto;
 
     > ul {
@@ -19,7 +20,7 @@ export const Container = styled.div`
     }
 `
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -33,6 +34,7 @@ export const Wrapper = styled.div`
         height: 350px;
         display: flex;
         align-items: center;
+        overflow: hidden;
         background: ${props => props.theme.colors.background};
     }
 

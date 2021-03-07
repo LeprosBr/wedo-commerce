@@ -11,23 +11,21 @@ const Footer: React.FC<Props> = () => {
             <Wrapper>
                 <div>
                     {Props.map(prop => (
-                        <section key={prop.title.length}>
+                        <section key={prop.title}>
                             <Heading level={5} size="small" fontWeight={700}>
                                 {prop.title}
                             </Heading>
                             <ul>
                                 {prop.datas.map(data => (
-                                    <>
-                                        <li>
-                                            <Heading
-                                                level={6}
-                                                size="xsmall"
-                                                fontWeight={100}
-                                            >
-                                                {data.text}
-                                            </Heading>
-                                        </li>
-                                    </>
+                                    <li key={data.text}>
+                                        <Heading
+                                            level={6}
+                                            size="xsmall"
+                                            fontWeight={100}
+                                        >
+                                            {data.text}
+                                        </Heading>
+                                    </li>
                                 ))}
                             </ul>
                         </section>

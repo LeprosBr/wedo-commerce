@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Stripe from 'stripe'
 import stripeConfig from '../../config/stripe'
-import { fadeInUp, stagger } from '../components/animate'
+import { stagger } from '../components/animate'
 import Product from '../components/product'
 import { Container } from '../styles/pages/home'
 import { Heading } from '../styles/theme'
@@ -30,7 +30,12 @@ const Home: React.FC<Props> = ({ products }) => {
     // console.log(products)
 
     return (
-        <Container initial="initial" animate="animate" exit={{ opacity: 0 }}>
+        <Container
+            initial="initial"
+            animate="animate"
+            exit={{ opacity: 0 }}
+            key="home"
+        >
             <Head>
                 <title>Wedo Pet | Home </title>
                 <meta
@@ -39,13 +44,11 @@ const Home: React.FC<Props> = ({ products }) => {
                 />
             </Head>
 
-            <motion.div variants={fadeInUp}>
-                <Heading level={2} size="xsmall" fontWeight={700}>
-                    MELHORES OFERTAS E PROMOÇÕES
-                </Heading>
-            </motion.div>
+            <Heading level={2} size="xsmall" fontWeight={700}>
+                MELHORES OFERTAS E PROMOÇÕES
+            </Heading>
 
-            <motion.div variants={stagger}>
+            <motion.div variants={stagger} key="listproducts">
                 {products.map(product => (
                     <Product key={product.id} product={product} />
                 ))}

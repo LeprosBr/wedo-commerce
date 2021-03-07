@@ -13,13 +13,13 @@ interface Props {
 const Product: React.FC<Props> = ({ product }) => {
     return (
         <Link href={product.id} key={product.id}>
-            <Card as={motion.div} variants={fadeInUp} whileTap={{ scale: 0.9 }}>
+            <Card as={motion.div} variants={fadeInUp} whileTap={{ scale: 0.9 }} key="card">
                 {product.images &&
                     product.images.map(img => (
                         <motion.div
                             variants={fadeImg}
                             className="cardImg"
-                            key={img.length}
+                            key={img}
                             transition={{ delay: 0.2 }}
                         >
                             <Image

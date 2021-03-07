@@ -1,4 +1,8 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const generalIconCss = css`
+   width: 25px;
+`
 
 export const Nav = styled.nav`
     width: 100%;
@@ -8,7 +12,7 @@ export const Nav = styled.nav`
     justify-content: space-between;
 
     svg {
-        width: 25px;
+        ${generalIconCss}
     }
 
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
@@ -60,25 +64,36 @@ export const Wrapper = styled.div`
         flex: 2;
         width: 100%;
         display: flex;
+        border-radius: 2px;
+        /* outline: none; */
 
         > input {
-            border: 0;
             width: 90%;
-            padding: 2px 6px;
+            border: none;
+            padding: 7.5px 8px;
             text-align: inherit;
             background-color: transparent;
             font-size: ${props => props.theme.sizes.small};
+            &:focus {
+                background: ${props => props.theme.colors.secondary};
+                outline-color: ${props => props.theme.colors.sucess};
+
+            }
         }
 
         > button {
             border: 0;
             margin: 0;
             width: 10%;
+
             padding: 5px;
             border-left: 1px solid ${props => props.theme.colors.text};
         }
 
         background-color: ${props => props.theme.colors.background};
+
+        &:focus {
+        }
     }
 
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {

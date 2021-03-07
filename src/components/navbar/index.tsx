@@ -4,12 +4,13 @@ import {
     SearchAlt,
     UserCircle
 } from '@styled-icons/boxicons-regular'
-import { FavoriteBorder as Favorite } from '@styled-icons/material/FavoriteBorder'
+import { FavoriteBorder as Favorite } from '@styled-icons/material'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as React from 'react'
 import wedoLogo from '../../assets/logo-wedo-medium.svg'
 import { Heading } from '../../styles/theme'
+import NavbarCollapse from './navbar-collapse'
 import { Aside, Nav, Wrapper } from './style'
 
 const Info: React.FC = () => (
@@ -80,6 +81,8 @@ const Navbar: React.FC = () => {
                     </section>
                 </Wrapper>
             </Nav>
+            <NavbarCollapse />
+
         </>
     )
 }

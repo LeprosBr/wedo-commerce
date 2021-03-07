@@ -55,6 +55,7 @@ const Product: React.FC<Props> = ({ product }) => {
             initial="initial"
             animate="animate"
             exit={{ opacity: 0 }}
+            key="details"
         >
             <Head>
                 <title>{product.name}</title>
@@ -73,9 +74,10 @@ const Product: React.FC<Props> = ({ product }) => {
                                 animate={{ x: 0, opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ delay: 0.2 }}
+                                key={img}
                             >
                                 <Image
-                                    key={img.length}
+                                    key={img}
                                     src={img}
                                     alt={product.name}
                                     width={600}
@@ -112,7 +114,7 @@ const Product: React.FC<Props> = ({ product }) => {
 export default Product
 
 const Payments: React.FC = () => (
-    <motion.div variants={fadeInUp}>
+    <motion.div variants={fadeInUp} key="payments">
         <Section>
             <Heading level={2} fontWeight={400} size="xsmall" color="sucess">
                 Frete grátis LPRS FULL
@@ -168,9 +170,7 @@ const Breadcrumbs: React.FC<Props> = ({ product }) => (
         <li>
             <Link href="/">Home</Link>
         </li>
-        <li>
-            <Link href="/">{product.type}</Link>
-        </li>
+        <li>{product.type}</li>
         <li>
             <strong>Produto</strong>
         </li>

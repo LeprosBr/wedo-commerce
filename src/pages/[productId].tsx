@@ -47,6 +47,20 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
 }
 
+const Breadcrumbs: React.FC<Props> = ({ product }) => (
+    <ul>
+        <li>
+            <Link href="/">Home</Link>
+        </li>
+        <li>
+            <strong>{product.type}</strong>
+        </li>
+        <li>
+            <strong>Produto</strong>
+        </li>
+    </ul>
+)
+
 const Product: React.FC<Props> = ({ product }) => {
     // console.log(product)
     return (
@@ -163,16 +177,4 @@ const Payments: React.FC = () => (
             </strong>
         </Section>
     </motion.div>
-)
-
-const Breadcrumbs: React.FC<Props> = ({ product }) => (
-    <ul>
-        <li>
-            <Link href="/">Home</Link>
-        </li>
-        <li>{product.type}</li>
-        <li>
-            <strong>Produto</strong>
-        </li>
-    </ul>
 )

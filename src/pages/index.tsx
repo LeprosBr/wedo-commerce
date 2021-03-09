@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Stripe from 'stripe'
 import stripeConfig from '../../config/stripe'
-import { Slider } from '../components'
+import { Benefits, Slider } from '../components'
 import { stagger } from '../components/animate'
 import Product from '../components/product'
 import { CardList, Wrapper } from '../styles/pages/home'
@@ -46,6 +46,7 @@ const Home: React.FC<Props> = ({ products }) => {
                 key="home"
             >
                 <Slider />
+                <Benefits />
                 <Wrapper>
                     <Heading level={2} size="xsmall" fontWeight={700}>
                         MELHORES OFERTAS E PROMOÇÕES

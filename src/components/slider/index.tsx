@@ -12,7 +12,7 @@ export const Props = [Bn1, Bn2, Bn3]
 
 const Slider: React.FC<Props> = () => {
     const [current, setCurrent] = useState(0)
-    const length = 3
+    const length = Props.length
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1)
@@ -22,7 +22,7 @@ const Slider: React.FC<Props> = () => {
         setCurrent(current === 0 ? length - 1 : current - 1)
     }
 
-    if (!Bn1) {
+    if (!Array.isArray(Props) || Props.length <= 0) {
         return null
     }
 

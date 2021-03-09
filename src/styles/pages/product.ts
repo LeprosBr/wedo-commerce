@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
+
+
 export const Container = styled(motion.div)`
+    height: 100%;
     margin: 1% auto;
+    max-width: ${props => props.theme.breakpoints.medium};
 
     > ul {
         padding: 10px 16px;

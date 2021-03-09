@@ -37,6 +37,9 @@ const generalIconCss = css`
     cursor: pointer;
     user-select: none;
     position: absolute;
+    border-radius: 50%;
+    color: ${props => props.theme.colors.primary};
+    background-color: ${props => props.theme.colors.theme};
 `
 export const Next = styled(NavigateNext)`
     right: 32px;

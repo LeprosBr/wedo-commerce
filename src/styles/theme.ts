@@ -10,7 +10,7 @@ const theme = {
         text: '#4c4c4c',
 
         sucess: '#00a650',
-        // link: '#1f4e96',
+        theme: '#2a4365',
         link: '#0622d6',
 
 

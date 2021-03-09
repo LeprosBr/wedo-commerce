@@ -16,9 +16,9 @@ export const Wrapper = styled.div`
     margin: 0 auto;
     padding: 2% 1% 1% 0;
     max-width: ${props => props.theme.breakpoints.medium};
-
     > div {
         display: flex;
+        padding: 0 1%;
         justify-content: center;
         > section {
             flex: 1;

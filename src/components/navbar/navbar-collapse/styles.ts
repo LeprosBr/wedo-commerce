@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export const Collapse = styled.div`
     width: 100%;
     height: 50px;
-    background-color: ${props => props.theme.colors.sucess};
+    background-color: ${props => props.theme.colors.theme};
 
     > ul {
         width: 100%;

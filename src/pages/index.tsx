@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Stripe from 'stripe'
 import stripeConfig from '../../config/stripe'
-import { Benefits, Slider } from '../components'
+import { Benefits, Newsletter, Slider } from '../components'
 import { stagger } from '../components/animate'
 import Product from '../components/product'
 import { CardList, Wrapper } from '../styles/pages/home'
@@ -62,6 +62,7 @@ const Home: React.FC<Props> = ({ products }) => {
                         ))}
                     </CardList>
                 </Wrapper>
+                <Newsletter />
             </motion.div>
         </>
     )

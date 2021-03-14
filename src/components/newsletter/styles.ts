@@ -10,12 +10,15 @@ export const Wrapper = styled.div`
     max-width: ${props => props.theme.breakpoints.medium};
     background: ${props => props.theme.colors.theme};
 
+    @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
+        display: none;
+    }
+
     > div {
         flex: 1;
         width: 30%;
         overflow: hidden;
         text-align: justify;
-
     }
 
     form {
@@ -42,14 +45,16 @@ export const Wrapper = styled.div`
             border: 0;
             margin: 0;
             padding: 1% 4%;
+            cursor: pointer;
             margin-right: 50px;
             border-radius: 2px;
             text-transform: uppercase;
-            color:${props => props.theme.colors.background};
+            color: ${props => props.theme.colors.background};
             background: ${props => props.theme.colors.sucess};
             border-left: 1px solid ${props => props.theme.colors.text};
+            &:hover {
+                background: ${props => props.theme.colors.theme};
+            }
         }
-
-
     }
 `

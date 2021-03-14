@@ -16,14 +16,15 @@ const Newsletter: React.FC = () => {
                 </Heading>
             </div>
             <form>
-                <input type="text" placeholder="Digite seu e-mail" name="search" />
+                <input
+                    type="text"
+                    placeholder="Digite seu e-mail"
+                    name="newsletter"
+                />
                 <button type="submit">cadastrar</button>
             </form>
         </Wrapper>
     )
 }
-
-
-
 
 export default Newsletter

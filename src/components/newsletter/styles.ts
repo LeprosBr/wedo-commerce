@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -40,21 +41,23 @@ export const Wrapper = styled.div`
                 outline-color: ${props => props.theme.colors.sucess};
             }
         }
-
-        > button {
-            border: 0;
-            margin: 0;
-            padding: 1% 4%;
-            cursor: pointer;
-            margin-right: 50px;
-            border-radius: 2px;
-            text-transform: uppercase;
-            color: ${props => props.theme.colors.background};
-            background: ${props => props.theme.colors.sucess};
-            border-left: 1px solid ${props => props.theme.colors.text};
-            &:hover {
-                background: ${props => props.theme.colors.theme};
-            }
-        }
     }
+`
+
+export const Button = styled(motion.div)`
+    border: 0;
+    margin: 0;
+    padding: 1% 4%;
+    cursor: pointer;
+    margin-right: 50px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: ${props => props.theme.colors.background};
+    background: ${props => props.theme.colors.sucess};
+    border-left: 1px solid ${props => props.theme.colors.text};
+    &:hover, :active{
+        background: ${props => props.theme.colors.hover};
+    }
+
+
 `

@@ -1,5 +1,6 @@
+import { motion } from 'framer-motion'
 import { Heading } from '../../styles/theme'
-import { Wrapper } from './styles'
+import { Button, Wrapper } from './styles'
 
 const Newsletter: React.FC = () => {
     return (
@@ -21,7 +22,14 @@ const Newsletter: React.FC = () => {
                     placeholder="Digite seu e-mail"
                     name="newsletter"
                 />
-                <button type="submit">cadastrar</button>
+                <Button
+                    as={motion.button}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    type="submit"
+                >
+                    cadastrar
+                </Button>
             </form>
         </Wrapper>
     )

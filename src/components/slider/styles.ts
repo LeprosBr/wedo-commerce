@@ -40,6 +40,12 @@ const generalIconCss = css`
     border-radius: 50%;
     color: ${props => props.theme.colors.primary};
     background-color: ${props => props.theme.colors.theme};
+
+
+    &:hover, :active{
+        background: ${props => props.theme.colors.hover};
+    }
+
 `
 export const Next = styled(NavigateNext)`
     right: 32px;

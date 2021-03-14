@@ -12,6 +12,7 @@ const theme = {
         sucess: '#00a650',
         theme: '#2a4365',
         link: '#0622d6',
+        hover: '#2196f3',
 
 
     },

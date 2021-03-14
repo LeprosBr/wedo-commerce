@@ -13,6 +13,7 @@ export const Nav = styled.nav`
 
     svg {
         ${generalIconCss}
+        cursor: pointer;
     }
 
     @media screen and (max-width: ${props => props.theme.breakpoints.small}) {
@@ -34,7 +35,6 @@ export const Wrapper = styled.div`
 
     > section {
         flex: 1;
-        cursor: pointer;
 
         > div {
             text-align: end;
@@ -85,7 +85,7 @@ export const Wrapper = styled.div`
             border: 0;
             margin: 0;
             width: 10%;
-
+            cursor: pointer;
             padding: 5px;
             border-left: 1px solid ${props => props.theme.colors.text};
         }
@@ -125,7 +125,7 @@ export const Wrapper = styled.div`
                     margin: 0 auto;
                     align-items: center;
                     justify-content: center;
-
+                    cursor: pointer !important;
                     > h6 {
                         display: none;
                     }

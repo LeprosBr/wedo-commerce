@@ -1,9 +1,6 @@
-# https://wedo-commerce-lprs.vercel.app/ 
+#  WebDo Commerce  -> https://wedo-commerce-lprs.vercel.app/ 
 
-
-## WebDo Commerce 
-
-First, run the development server:
+To run the project just make a clone and then do yarn install or npm install
 
 ```bash
 npm run dev

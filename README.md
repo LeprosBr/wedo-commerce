@@ -1,7 +1,5 @@
 ## Link WebDo Commerce: https://wedo-commerce-lprs.vercel.app
 
-At Wedo you will find medicines, 
-beauty and hygiene. To serve our customers, we have physical stores. Access now and see prices ...
 
 To run the project just make a clone and then do yarn install or npm install
 
